@@ -1,0 +1,16 @@
+name: r_phylogenetics_worshop-binderized
+channels:
+  - conda-forge
+  - bioconda
+  - r
+dependencies:
+  - r-base>=4
+  - r-irkernel>=1.1
+  - r-tidyverse
+  - bioconductor-ggtree
+  - bioconductor-treeio
+  - r-phytools
+  - r-ape
+  - r-ggpubr
+  - r-ggnewscale
+  - r-ggstance

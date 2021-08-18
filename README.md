@@ -2,6 +2,7 @@
 
 In this workshop you will learn how to work with phylogenetic trees programatically using R, particularly using the package [ggtree](https://yulab-smu.top/treedata-book/index.html)
 
+[![Binder](http://mybinder.org/badge_logo.svg)](http://mybinder.org/v2/gh/fomightez/r_phylogenetics_worshop/master?urlpath=rstudio) 
 
 ---
 
@@ -68,6 +69,8 @@ The metadata used throughout the workshop for reference.
 
 
 ## Acknowledgements and references 
+
+***Clarifying Attribution: I, Wayne (fomightez@GitHub), am not involved in this workshop at all. That person is Alex McFarland. See Alex's materials, such as [the original repo for the workshop](https://github.com/agmcfarland/r_phylogenetics_worshop). I simply set up this fork of the repository to make the software useable in RStudio without installation headaches and in a full-featured, browser-based computational environment.***
 
 
 [Northwestern University Information Technology Research Computing Services](https://github.com/nuitrcs)
