@@ -23,6 +23,7 @@ Section 3: Plotting trees with bar plots
 #install.packages('ggpubr')
 #install.packages('ggnewscale')
 #install.packages('ggstance')
+#install.packages('ggimage')
 
 library(ggtree)
 library(ggplot2)
@@ -33,6 +34,7 @@ library(ape)
 library(ggpubr)
 library(ggnewscale)
 library(ggstance)
+library(ggimage)
 
 #setwd('/Users/owlex/Dropbox/Documents/Northwestern/rcs_consult/r_phylogenetics_workshop/r_phylogenetics_worshop') # change this to your R Markdown's file path
 
@@ -57,7 +59,7 @@ df_meta <- read.csv('enoyl_metadata.csv')
 # read in tree
 tree_raxml <- ape::read.tree('RAxML_bipartitions.raw_enoyl_seqs')
 # root tree
-tree_raxml <- ape::root(tree_raxml, outgroup='tr|E6KYQ2|E6KYQ2_9PAST')
+tree_raxml <- ape::root(tree_raxml, outgroup='tr|E6KYQ2|E6KYQ2_9PAST',resolve.root = TRUE)
 
 
 # check that metadata and tree have the same tip labels
@@ -304,7 +306,7 @@ df_meta <- read.csv('enoyl_metadata.csv')
 # read in tree
 tree_raxml <- ape::read.tree('RAxML_bipartitions.raw_enoyl_seqs')
 # root tree
-tree_raxml <- ape::root(tree_raxml, outgroup='tr|E6KYQ2|E6KYQ2_9PAST')
+tree_raxml <- ape::root(tree_raxml, outgroup='tr|E6KYQ2|E6KYQ2_9PAST',resolve.root = TRUE)
 
 # make base tree
 tree_raxml_visual <- ggtree(tree_raxml)

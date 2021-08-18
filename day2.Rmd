@@ -61,7 +61,7 @@ We will read in the RAxML phylogenetic tree and visualize it.
 
 tree_raxml <- ape::read.tree('RAxML_bipartitions.raw_enoyl_seqs')
 
-tree_raxml <- ape::root(tree_raxml ,outgroup='tr|E6KYQ2|E6KYQ2_9PAST')
+tree_raxml <- ape::root(tree_raxml ,outgroup='tr|E6KYQ2|E6KYQ2_9PAST',resolve.root = TRUE)
 
 tree_raxml_visual <- ggtree(tree_raxml)+
   geom_nodelab(aes(label=node),nudge_x=-.15,nudge_y=.4,size=2,color='blue')+
@@ -144,7 +144,7 @@ Make a base tree called `tree_raxml_ex_visual` using `ggtree()` from the `tree_r
 ```{r eval=FALSE, include=FALSE}
 tree_raxml_ex <- ape::___('RAxML_bipartitions.raw_enoyl_seqs')
 
-tree_raxml_ex <- ape::root(___ ,outgroup='tr|E6KYQ2|E6KYQ2_9PAST')
+tree_raxml_ex <- ape::root(___ ,outgroup='tr|E6KYQ2|E6KYQ2_9PAST',resolve.root = TRUE)
 
 ___ <- ggtree(___)+
   geom_nodelab(aes(label=node),nudge_x=-.15,nudge_y=.4,size=2,color='blue')+
@@ -167,7 +167,7 @@ df_meta_ex <- read.csv('___')
 
 tree_raxml_ex2 <- ___::read.tree('RAxML_bipartitions.raw_enoyl_seqs')
 
-tree_raxml_ex2 <- ape::root(___ ,outgroup='tr|E6KYQ2|E6KYQ2_9PAST')
+tree_raxml_ex2 <- ape::root(___ ,outgroup='tr|E6KYQ2|E6KYQ2_9PAST',resolve.root = TRUE)
 
 ___ <- ___(tree_raxml_ex2)+
   geom_nodelab(aes(label=node),nudge_x=-.15,nudge_y=.4,size=2,color='blue')+
@@ -206,7 +206,7 @@ Having metadata attached to a tree allows us to make additional tree manipulatio
 # base tree 
 tree_raxml <- ape::read.tree('RAxML_bipartitions.raw_enoyl_seqs')
 
-tree_raxml <- ape::root(tree_raxml ,outgroup='tr|E6KYQ2|E6KYQ2_9PAST')
+tree_raxml <- ape::root(tree_raxml ,outgroup='tr|E6KYQ2|E6KYQ2_9PAST',resolve.root = TRUE)
 
 tree_raxml_visual <- ggtree(tree_raxml)
 
@@ -250,7 +250,7 @@ ___ <- read.csv('enoyl_metadata.csv')
 
 ___ <- ape::read.tree('RAxML_bipartitions.raw_enoyl_seqs')
 
-tree_raxml_ex <- ape::root(___ ,outgroup='___')
+tree_raxml_ex <- ape::root(___ ,outgroup='___',resolve.root = TRUE)
 
 ```
 
@@ -288,7 +288,7 @@ Access to the metadata can let us conditionally display certain features. For ex
 # base tree 
 tree_raxml <- ape::read.tree('RAxML_bipartitions.raw_enoyl_seqs')
 
-tree_raxml <- ape::root(tree_raxml ,outgroup='tr|E6KYQ2|E6KYQ2_9PAST')
+tree_raxml <- ape::root(tree_raxml ,outgroup='tr|E6KYQ2|E6KYQ2_9PAST',resolve.root = TRUE)
 
 tree_raxml_visual <- ggtree(tree_raxml)
 
@@ -373,7 +373,7 @@ df_meta_ex <- read.csv('enoyl_metadata.csv')
 
 tree_raxml_ex <- ape::read.tree('RAxML_bipartitions.raw_enoyl_seqs')
 
-tree_raxml_ex <- ape::root(tree_raxml_ex ,outgroup='tr|E6KYQ2|E6KYQ2_9PAST')
+tree_raxml_ex <- ape::root(tree_raxml_ex ,outgroup='tr|E6KYQ2|E6KYQ2_9PAST',resolve.root = TRUE)
 
 df_meta_ex <- read.csv('enoyl_metadata.csv')
 
@@ -426,7 +426,7 @@ For example, let's plot a heatmap that has all three different tolerance phenoty
 # base tree 
 tree_raxml <- ape::read.tree('RAxML_bipartitions.raw_enoyl_seqs')
 
-tree_raxml <- ape::root(tree_raxml ,outgroup='tr|E6KYQ2|E6KYQ2_9PAST')
+tree_raxml <- ape::root(tree_raxml ,outgroup='tr|E6KYQ2|E6KYQ2_9PAST',resolve.root = TRUE)
 
 tree_raxml_visual <- ggtree(tree_raxml)
 
@@ -489,7 +489,7 @@ Read in the metadata file `'enoyl_metadata.csv'` and assign it to `df_meta_ex`
 # base tree 
 tree_raxml_ex <- ape::read.tree('RAxML_bipartitions.raw_enoyl_seqs')
 
-tree_raxml_ex <- ape::root(___ ,outgroup='tr|E6KYQ2|E6KYQ2_9PAST')
+tree_raxml_ex <- ape::root(___ ,outgroup='tr|E6KYQ2|E6KYQ2_9PAST',resolve.root = TRUE)
 
 tree_raxml_visual_ex <- ggtree(___)
 
@@ -558,7 +558,7 @@ Sometimes it is useful to display multiple types of heatmap data next to a singl
 # read in data
 tree_raxml <- ape::read.tree('RAxML_bipartitions.raw_enoyl_seqs')
 
-tree_raxml <- ape::root(tree_raxml ,outgroup='tr|E6KYQ2|E6KYQ2_9PAST')
+tree_raxml <- ape::root(tree_raxml ,outgroup='tr|E6KYQ2|E6KYQ2_9PAST',resolve.root = TRUE)
 
 #make the base tree
 tree_raxml_visual <- ggtree(tree_raxml)

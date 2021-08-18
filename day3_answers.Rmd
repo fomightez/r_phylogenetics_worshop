@@ -16,6 +16,7 @@ output: html_document
 #install.packages('ape')
 #install.packages('ggpubr')
 #install.packages('ggnewscale')
+#install.packages('ggimage')
 
 library(ggtree)
 library(ggplot2)
@@ -26,6 +27,7 @@ library(ape)
 library(ggpubr)
 library(ggnewscale)
 library(ggstance)
+library(ggimage)
 
 #setwd('/Users/owlex/Dropbox/Documents/Northwestern/rcs_consult/r_phylogenetics_workshop/r_phylogenetics_worshop') # change this to your R Markdown's file path
 

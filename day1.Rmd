@@ -209,7 +209,7 @@ We will try this by using `ape::root()` on the gene `sp|P24182|ACCC_ECOLI` and `
 ```{r}
 
 # first outgroup tree
-tree_raxml_outgrouproot <- ape::root(tree_raxml ,outgroup='sp|P24182|ACCC_ECOLI')
+tree_raxml_outgrouproot <- ape::root(tree_raxml ,outgroup='sp|P24182|ACCC_ECOLI',resolve.root = TRUE)
 
 tree_outgroup_visual <- ggtree(tree_raxml_outgrouproot)+
   geom_tiplab()+
@@ -218,7 +218,7 @@ tree_outgroup_visual <- ggtree(tree_raxml_outgrouproot)+
 
 
 # second outgroup tree
-tree_raxml_outgrouproot2 <- ape::root(tree_raxml ,outgroup='tr|E6KYQ2|E6KYQ2_9PAST')
+tree_raxml_outgrouproot2 <- ape::root(tree_raxml ,outgroup='tr|E6KYQ2|E6KYQ2_9PAST',resolve.root = TRUE)
 
 tree_outgroup2_visual <- ggtree(tree_raxml_outgrouproot2)+
   geom_tiplab()+
@@ -249,7 +249,7 @@ ___ <- ___::___.tree('RAxML_bipartitions.raw_enoyl_seqs')
 
 ```{r eval=FALSE, include=FALSE}
 
-my_rooted_tree <- ape::root(___ ,outgroup = '___')
+my_rooted_tree <- ape::root(___ ,outgroup = '___',resolve.root = TRUE)
 
 ```
 
@@ -276,7 +276,7 @@ First we will make a tree for a base comparison
 
 tree_raxml <- ape::read.tree('RAxML_bipartitions.raw_enoyl_seqs')
 
-tree_raxml_outgrouproot_compare <- ape::root(tree_raxml ,outgroup='tr|E6KYQ2|E6KYQ2_9PAST')
+tree_raxml_outgrouproot_compare <- ape::root(tree_raxml ,outgroup='tr|E6KYQ2|E6KYQ2_9PAST',resolve.root = TRUE)
 
 tree_raxml_outgrouproot_visual <- ggtree(tree_raxml_outgrouproot_compare)+
   geom_tiplab()+
@@ -389,9 +389,9 @@ tree2_raxml <- ape::read.___('___')
 
 ```{r eval=FALSE, include=FALSE}
 
-tree1_fasttree <- ape::___(tree1_fasttree ,outgroup='___')
+tree1_fasttree <- ape::___(tree1_fasttree ,outgroup='___',resolve.root = TRUE)
 
-___ <- ape::___(tree2_raxml ,___='tr|E6KYQ2|E6KYQ2_9PAST')
+___ <- ape::___(tree2_raxml ,___='tr|E6KYQ2|E6KYQ2_9PAST',resolve.root = TRUE)
 
 ```
 
@@ -532,7 +532,7 @@ Make a tree, `tree1_raxml_visual` with `ggtree()` showing each internal `label=n
 ```{r eval=FALSE, include=FALSE}
 
 ___ <- ape::read.tree('RAxML_bipartitions.raw_enoyl_seqs')
-tree1_raxml <- ape::root(___ ,outgroup='___')
+tree1_raxml <- ape::root(___ ,outgroup='___',resolve.root = TRUE)
 
 tree1_raxml_visual <- ggtree(tree1_raxml)+
   ___(aes(label=___),nudge_x=-.15,nudge_y=.4,size=2,color='blue')+
@@ -626,7 +626,7 @@ One last thing we might want to do is not display any bootstrap value less than 
 
 tree_raxml <- ape::read.tree('RAxML_bipartitions.raw_enoyl_seqs')
 
-tree_raxml_outgrouproot <- ape::root(tree_raxml ,outgroup='tr|E6KYQ2|E6KYQ2_9PAST')
+tree_raxml_outgrouproot <- ape::root(tree_raxml ,outgroup='tr|E6KYQ2|E6KYQ2_9PAST',resolve.root = TRUE)
 
 tree_raxml_outgrouproot$node.label[as.numeric(tree_raxml_outgrouproot$node.label)<50] <- '' # make bootstrap values less than 50 an empty character
 

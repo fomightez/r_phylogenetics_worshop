@@ -40,7 +40,7 @@ We will now practice attaching metadta to a tree and changing the tip label name
 ```{r}
 tree_raxml_ex <- ape::read.tree('RAxML_bipartitions.raw_enoyl_seqs')
 
-tree_raxml_ex <- ape::root(tree_raxml_ex ,outgroup='tr|E6KYQ2|E6KYQ2_9PAST')
+tree_raxml_ex <- ape::root(tree_raxml_ex ,outgroup='tr|E6KYQ2|E6KYQ2_9PAST',resolve.root = TRUE)
 
 tree_raxml_ex_visual <- ggtree(tree_raxml)+
   geom_nodelab(aes(label=node),nudge_x=-.15,nudge_y=.4,size=2,color='blue')+
@@ -59,7 +59,7 @@ df_meta_ex <- read.csv('enoyl_metadata.csv')
 
 tree_raxml_ex2 <- ape::read.tree('RAxML_bipartitions.raw_enoyl_seqs')
 
-tree_raxml_ex2 <- ape::root(tree_raxml_ex2 ,outgroup='tr|E6KYQ2|E6KYQ2_9PAST')
+tree_raxml_ex2 <- ape::root(tree_raxml_ex2 ,outgroup='tr|E6KYQ2|E6KYQ2_9PAST',resolve.root = TRUE)
 
 tree_raxml_ex_visual2 <- ggtree(tree_raxml_ex2)+
   geom_nodelab(aes(label=node),nudge_x=-.15,nudge_y=.4,size=2,color='blue')+
@@ -105,7 +105,7 @@ df_meta_ex <- read.csv('enoyl_metadata.csv')
 
 tree_raxml_ex <- ape::read.tree('RAxML_bipartitions.raw_enoyl_seqs')
 
-tree_raxml_ex <- ape::root(tree_raxml_ex ,outgroup='tr|E6KYQ2|E6KYQ2_9PAST')
+tree_raxml_ex <- ape::root(tree_raxml_ex ,outgroup='tr|E6KYQ2|E6KYQ2_9PAST',resolve.root = TRUE)
 
 ```
 
@@ -152,7 +152,7 @@ df_meta_ex <- read.csv('enoyl_metadata.csv')
 
 tree_raxml_ex <- ape::read.tree('RAxML_bipartitions.raw_enoyl_seqs')
 
-tree_raxml_ex <- ape::root(tree_raxml_ex ,outgroup='tr|E6KYQ2|E6KYQ2_9PAST')
+tree_raxml_ex <- ape::root(tree_raxml_ex ,outgroup='tr|E6KYQ2|E6KYQ2_9PAST',resolve.root = TRUE)
 
 df_meta_ex <- read.csv('enoyl_metadata.csv')
 
@@ -208,7 +208,7 @@ Read in the metadata file `'enoyl_metadata.csv'` and assign it to `df_meta_ex`
 # base tree 
 tree_raxml_ex <- ape::read.tree('RAxML_bipartitions.raw_enoyl_seqs')
 
-tree_raxml_ex <- ape::root(tree_raxml_ex ,outgroup='tr|E6KYQ2|E6KYQ2_9PAST')
+tree_raxml_ex <- ape::root(tree_raxml_ex ,outgroup='tr|E6KYQ2|E6KYQ2_9PAST',resolve.root = TRUE)
 
 tree_raxml_visual_ex <- ggtree(tree_raxml_ex)
 

@@ -79,7 +79,7 @@ my_tree_raxml <- ape::read.tree('RAxML_bipartitions.raw_enoyl_seqs')
 
 ```{r}
 
-my_rooted_tree <- ape::root(my_tree_raxml ,outgroup='sp|P0AEK4|FABI_ECOLI')
+my_rooted_tree <- ape::root(my_tree_raxml ,outgroup='sp|P0AEK4|FABI_ECOLI',resolve.root = TRUE)
 
 ```
 
@@ -110,9 +110,9 @@ tree2_raxml <- ape::read.tree('RAxML_bipartitions.raw_enoyl_seqs')
 
 ```{r}
 
-tree1_fasttree <- ape::root(tree1_fasttree ,outgroup='tr|E6KYQ2|E6KYQ2_9PAST')
+tree1_fasttree <- ape::root(tree1_fasttree ,outgroup='tr|E6KYQ2|E6KYQ2_9PAST',resolve.root = TRUE)
 
-tree2_raxml <- ape::root(tree2_raxml ,outgroup='tr|E6KYQ2|E6KYQ2_9PAST')
+tree2_raxml <- ape::root(tree2_raxml ,outgroup='tr|E6KYQ2|E6KYQ2_9PAST',resolve.root = TRUE)
 
 ```
 
@@ -176,7 +176,7 @@ Make a tree showing each internal node label using `geom_nodelab()`
 ```{r}
 
 tree1_raxml <- ape::read.tree('RAxML_bipartitions.raw_enoyl_seqs')
-tree1_raxml <- ape::root(tree1_raxml ,outgroup='tr|E6KYQ2|E6KYQ2_9PAST')
+tree1_raxml <- ape::root(tree1_raxml ,outgroup='tr|E6KYQ2|E6KYQ2_9PAST',resolve.root = TRUE)
 
 tree1_raxml_visual <- ggtree(tree1_raxml)+
   geom_nodelab(aes(label=node),nudge_x=-.15,nudge_y=.4,size=2,color='blue')+
