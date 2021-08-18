@@ -247,7 +247,91 @@ library(ggpubr)</code></pre>
 <p>Let’s look at our metadata for our enoyl genes.</p>
 <pre class="r"><code>df_meta &lt;- read.csv(&#39;enoyl_metadata.csv&#39;)
 
-View(df_meta)</code></pre>
+print(df_meta)</code></pre>
+<pre><code>##                           gene_id gene_name
+## 1            sp|Q9HZP8|FABV_PSEAE     fabV 
+## 2           sp|Q9KRA3|FABV1_VIBCH     fabV 
+## 3            sp|Q2P9J6|FABV_XANOM     fabV 
+## 4            sp|Q73Q47|FABV_TREDE     fabV 
+## 5            sp|Q62L02|FABV_BURMA     fabV 
+## 6            sp|P0AEK4|FABI_ECOLI     fabI 
+## 7            sp|P54616|FABI_BACSU     fabI 
+## 8            sp|Q81GI3|FABI_BACCR     fabI 
+## 9            sp|Q6GI75|FABI_STAAR     fabI 
+## 10           sp|O24990|FABI_HELPY     fabI 
+## 11 tr|A0A0M3G239|A0A0M3G239_HAEHA      fabK
+## 12         tr|E6KYQ2|E6KYQ2_9PAST      fabK
+## 13 tr|A0A4Y9GUQ1|A0A4Y9GUQ1_9PAST      fabK
+## 14 tr|A0A1R0ED53|A0A1R0ED53_HAEPA      fabK
+## 15         tr|B0BP34|B0BP34_ACTPJ      fabK
+## 16           sp|P24182|ACCC_ECOLI      fabG
+## 17           sp|P9WGT3|MABA_MYCTU      fabG
+## 18          sp|I6Y778|FABG4_MYCTU      fabG
+## 19           sp|P0AEK2|FABG_ECOLI      fabG
+## 20           sp|P71534|MABA_MYCS2      fabG
+##                                   gene_description             genus
+## 1   Enoyl-[acyl-carrier-protein] reductase [NADH]        pseudomonas
+## 2    Enoyl-[acyl-carrier-protein] reductase [NADH]            vibrio
+## 3   Enoyl-[acyl-carrier-protein] reductase [NADH]        xanthomonas
+## 4              Trans-2-enoyl-CoA reductase [NADH]          treponema
+## 5   Enoyl-[acyl-carrier-protein] reductase [NADH]       burkholderia
+## 6    Enoyl-[acyl-carrier-protein] reductase [NADH]       escherichia
+## 7    Enoyl-[acyl-carrier-protein] reductase [NADH]          bacillus
+## 8    Enoyl-[acyl-carrier-protein] reductase [NADH]          bacillus
+## 9   Enoyl-[acyl-carrier-protein] reductase [NADPH]    staphylococcus
+## 10   Enoyl-[acyl-carrier-protein] reductase [NADH]      helicobacter
+## 11  Enoyl-[acyl-carrier-protein] reductase [NADH]        haemophilus
+## 12  Enoyl-[acyl-carrier-protein] reductase [NADH]    aggregatibacter
+## 13  Enoyl-[acyl-carrier-protein] reductase [NADH]        pasteurella
+## 14  Enoyl-[acyl-carrier-protein] reductase [NADH]        haemophilus
+## 15  Enoyl-[acyl-carrier-protein] reductase [NADH]     actinobacillus
+## 16                             Biotin carboxylase        escherichia
+## 17  Enoyl-[acyl-carrier-protein] reductase [NADH]      mycobacterium
+## 18  Enoyl-[acyl-carrier-protein] reductase [NADH]      mycobacterium
+## 19  Enoyl-[acyl-carrier-protein] reductase [NADH]        escherichia
+## 20  Enoyl-[acyl-carrier-protein] reductase [NADH]  mycolicibacterium
+##             species strain_id novel triclosan_tolerance ampicillin_tolerance
+## 1        aeruginosa strain_01     0                 128                  128
+## 2          cholerae strain_02     0                 128                  128
+## 3            oryzae strain_03     0                 128                    2
+## 4         denticola strain_04     0                 128                    2
+## 5            mallei strain_05     0                 128                    2
+## 6              coli strain_06     0                   2                    4
+## 7          subtilis strain_07     0                   4                   16
+## 8            cereus strain_08     0                   2                   16
+## 9            aureus strain_09     0                   2                   64
+## 10           pylori strain_10     0                   4                   64
+## 11     haemolyticus strain_11     0                  64                   64
+## 12           segnis strain_12     0                  64                   16
+## 13              sp. strain_13     0                  64                   16
+## 14   parainfluenzae strain_14     0                  64                    2
+## 15 pleuropneumoniae strain_15     0                  64                    4
+## 16             coli strain_16     1                 128                    8
+## 17     tuberculosis strain_17     0                   4                  128
+## 18     tuberculosis strain_18     0                   2                  128
+## 19             coli strain_19     0                   2                   64
+## 20        smegmatis strain_20     0                   4                   64
+##    tetracycline_tolerance community_A community_B
+## 1                      16           1           0
+## 2                       8           1           0
+## 3                       4           1           0
+## 4                       2           1           0
+## 5                       4           1           0
+## 6                       8           1           0
+## 7                      64           0           1
+## 8                     128           0           1
+## 9                       8           0           1
+## 10                      4           0           1
+## 11                      2           1           0
+## 12                      4           1           0
+## 13                      8           1           0
+## 14                      8           1           0
+## 15                      4           1           0
+## 16                      2           1           0
+## 17                      2           0           1
+## 18                     16           0           1
+## 19                    128           0           1
+## 20                      4           0           1</code></pre>
 <p>We will read in the RAxML phylogenetic tree and visualize it.</p>
 <pre class="r"><code>tree_raxml &lt;- ape::read.tree(&#39;RAxML_bipartitions.raw_enoyl_seqs&#39;)
 

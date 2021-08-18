@@ -49,7 +49,7 @@ Let's look at our metadata for our enoyl genes.
 
 df_meta <- read.csv('enoyl_metadata.csv')
 
-View(df_meta)
+print(df_meta)
 
 ```
 
