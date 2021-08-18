@@ -10,5 +10,3 @@ dependencies:
   - r-phytools
   - r-ape
   - r-ggpubr
-  - r-ggnewscale
-  - r-ggstance
