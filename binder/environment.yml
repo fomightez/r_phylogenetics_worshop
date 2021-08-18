@@ -7,7 +7,6 @@ dependencies:
   - r-base>=4
   - r-irkernel>=1.1
   - r-tidyverse
-  - bioconductor-treeio
   - r-phytools
   - r-ape
   - r-ggpubr
