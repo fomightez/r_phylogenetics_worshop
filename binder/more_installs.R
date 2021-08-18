@@ -9,3 +9,9 @@
 install.packages("BiocManager", repos='http://cran.us.r-project.org')
 BiocManager::install("ggtree")
 BiocManager::install("treeio")
+
+
+
+# move ggimage to here because not at conda-forge or bioconda and conda version on genomedk channel is only 
+# version 0.2.5 at https://anaconda.org/genomedk/r-ggimage ; worked out in https://github.com/fomightez/galacticEdTools-binder/blob/master/binder/more_installs.R
+install.packages("ggimage", repos='http://cran.us.r-project.org')
