@@ -2,7 +2,7 @@
 
 In this workshop you will learn how to work with phylogenetic trees programatically using R, particularly using the package [ggtree](https://yulab-smu.top/treedata-book/index.html)
 
-[![Binder](http://mybinder.org/badge_logo.svg)](http://mybinder.org/v2/gh/fomightez/r_phylogenetics_worshop/master?urlpath=rstudio) 
+[![Binder](http://mybinder.org/badge_logo.svg)](http://mybinder.org/v2/gh/fomightez/r_phylogenetics_worshop/main?urlpath=rstudio) 
 
 ---
 
