@@ -1,5 +1,5 @@
 # Specifying the mirrors is based on https://stackoverflow.com/a/11488224/8508004 and was added because 
 # without them R complained
-install.packages("twitteR", repos='http://cran.us.r-project.org') # adding this because when I switched to using rtweet, things worked but when running `sentiment_analysis.R`,
-#  I saw message from RStudio (probably triggered by `library(syuzhet)` or `library(tm)`) that `twitteR` was needed but not installed and 
-# if wanted to install it. It installed from inside okay and so hoping this works so that message doesn't come up when running `sentiment_analysis.R`
+install.packages("ggtree", repos='http://cran.us.r-project.org') # adding this here because needs to install but trying with conda, I was seeing
+# "package bioconductor-ggtree-3.0.1-r41hdfd78af_0 requires r-base >=4.1,<4.2.0a0, but none of the providers can be installed", but also saw when I
+# I tried updating to r-base 4.1, still was seeing, and so trying this. This had helped with a package before, see https://github.com/fomightez/chapter7/blob/master/binder/more_installs.R
