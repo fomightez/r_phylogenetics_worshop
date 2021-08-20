@@ -87,9 +87,6 @@ The metadata used throughout the workshop for reference.
 
 ## Acknowledgements and references 
 
-***Clarifying Attribution: I, Wayne (fomightez@GitHub), am not involved in this workshop at all. That person is Alex McFarland. See Alex's materials, such as [the original repo for the workshop](https://github.com/agmcfarland/r_phylogenetics_worshop). I simply set up this fork of the repository to make the software useable in RStudio without installation headaches and in a full-featured, browser-based computational environment.***  
-(Related to this, upon session launch, the most current current Rmarkdown files are retrieved from Alex's source repo so that **anyone using this via MyBinder.org has the most current content available.**)
-
 
 [Northwestern University Information Technology Research Computing Services](https://github.com/nuitrcs)
 
@@ -104,3 +101,7 @@ Paradis E, Schliep K (2019). “ape 5.0: an environment for modern phylogenetics
 G Yu*, TTY Lam, H Zhu, Y Guan*. Two methods for mapping and visualizing associated data on phylogeny using ggtree. Molecular Biology and Evolution, 2018, 35(2):3041-3043. doi: 10.1093/molbev/msy194.
 
 G Yu, DK Smith, H Zhu, Y Guan, TTY Lam*. ggtree: an R package for visualization and annotation of phylogenetic trees with their covariates and other associated data. Methods in Ecology and Evolution. 2017, 8(1):28-36. doi: 10.1111/2041-210X.12628.
+
+
+***Clarifying Attribution: I, Wayne (fomightez@GitHub), am not involved in this workshop at all. The person who authored the featured content is Alex McFarland. See Alex's materials, such as [the original repo for the workshop](https://github.com/agmcfarland/r_phylogenetics_worshop). I simply set up this fork of the repository to make the software useable in RStudio without installation headaches and in a full-featured, browser-based computational environment.***  
+(Related to this, upon session launch, the most current current Rmarkdown files are retrieved from Alex's source repo so that **anyone using this via MyBinder.org has the most current content available.**)
