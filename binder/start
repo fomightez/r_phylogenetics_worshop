@@ -7,6 +7,44 @@ set -e
 export LD_LIBRARY_PATH=${NB_PYTHON_PREFIX}/lib:${LD_LIBRARY_PATH}
 
 
+# Use Alex McFarland's originating repo as the source of the content so that most current content is always
+# present upon launch via MyBinder.org
+rm *.Rmd
+rm *.html
+git clone https://github.com/agmcfarland/r_phylogenetics_worshop.git
+mv r_phylogenetics_worshop/*.Rmd .
+mv r_phylogenetics_worshop/*.html .
+rm -rf r_phylogenetics_worshop
+
+
+
+# To the *.Rmd files make the changes I (Wayne, Fomightez@Github) worked out in conjuction with Alex McFarland, 
+# see https://twitter.com/alexmcfarland_/status/1428084362545872897
+#--------------------------------------------------------------------------------------------------------------
+
+#I didn't note in the commit history but I also commented out lines like this `setwd('/Users/owlex/Dropbox/Documents/Northwestern/rcs_consult/r_phylogenetics_workshop/r_phylogenetics_worshop')` 
+# at top of the Rmarkdwon files, and so that is what `sed -i 's/^setwd(/#setwd(/g' ${rmarkdown}` does. (actually lines beginning `setwd(` the way I wrote it.)
+
+#  `sed -i "/<- ape::root(/s/)$/,resolve.root = TRUE)/" ${rmarkdown}` finds any line in Rmarkdown containing `<- ape::root(` and if 
+# there is a closing parantheses at the end, it replaces the closing parentheses with `,resolve.root = TRUE)`
+
+# the lines involving `ggimage` add installing and invoking that library after similar lines concerning `ggstance` library. That library is used
+# to target day3, as that seems to be the one that uses that. This is to address what Alex warned me about: "Afterwards, you'll run into nodepie() issues. To 
+# resolve that makes ure the package 'ggimage' is installed."SOURCE: https://twitter.com/alexmcfarland_/status/1428084473652973571
+
+# Final sed `I think here changing it from View() to print() would actually be a better solution.`https://twitter.com/alexmcfarland_/status/1428105237638811648
+# But I don't need to do this unless knitting the html!!!
+for rmarkdown in *.Rmd
+do
+sed -i 's/^setwd(/#setwd(/' ${rmarkdown}
+sed -i "/<- ape::root(/s/)$/,resolve.root = TRUE)/" ${rmarkdown}
+sed -i "/#install.packages('ggstance')/a #install.packages('ggimage')" ${rmarkdown}
+sed -i '/library(ggstance)/a library(ggimage)' ${rmarkdown}
+#sed -i 's/View(df_meta)/print(df_meta)/' ${rmarkdown}
+done
+#--------------------------------------------------------------------------------------------------------------
+
+
 # this must be last line according to 
 # https://repo2docker.readthedocs.io/en/latest/config_files.html#start-run-code-before-the-user-sessions-starts
 exec "$@"
